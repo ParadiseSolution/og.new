@@ -29,14 +29,14 @@ export function MobileNav() {
           <SheetTitle>
             <Image
               src="/logo.svg"
-              alt="imgsrc"
+              alt="og.new"
               width={32}
               height={32}
               className="block dark:hidden"
             />
             <Image
               src="/logo_dark.svg"
-              alt="imgsrc"
+              alt="og.new"
               width={32}
               height={32}
               className="hidden dark:block"
@@ -51,7 +51,7 @@ export function MobileNav() {
             className="justify-start px-0"
             asChild
           >
-            <Link href="mailto:support@imgsrc.io" target="_blank">
+            <Link href="mailto:og@clerk.dev" target="_blank">
               Support
             </Link>
           </Button>

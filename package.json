@@ -1,9 +1,9 @@
 {
-  "name": "imgsrc-app",
+  "name": "og-new",
   "version": "0.1.0",
   "license": "MIT",
-  "homepage": "https://imgsrc.io",
-  "author": "Fady Abdelmalik <support@imgsrc.io>",
+  "homepage": "https://og.new",
+  "author": "Clerk <og@clerk.dev>, Fady Abdelmalik <fady@clerk.dev>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

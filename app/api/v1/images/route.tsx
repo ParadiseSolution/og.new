@@ -29,7 +29,7 @@ export const POST = async (request: NextRequest) => {
       <Template
         // @ts-ignore
         template={template}
-        renderWatermark
+        renderWatermark={false}
       />
     ),
     {

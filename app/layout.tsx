@@ -17,21 +17,21 @@ import { MobileNav } from "@/components/nav/mobile-nav"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://imgsrc.io"),
-  title: "imgsrc",
+  metadataBase: new URL("https://og.new"),
+  title: "og.new",
   description: "Generate beautiful Open Graph images with zero effort.",
   openGraph: {
-    title: "imgsrc",
+    title: "og.new",
     description: "Generate beautiful Open Graph images with zero effort.",
     type: "website",
-    url: "https://imgsrc.io",
-    siteName: "imgsrc",
+    url: "https://og.new",
+    siteName: "og.new",
     images: [
       {
-        url: "https://imgsrc.io/og.png",
+        url: "https://og.new/og.png",
         width: 1200,
         height: 630,
-        alt: "imgsrc - Generate beautiful Open Graph images with zero effort.",
+        alt: "og.new - Generate beautiful Open Graph images with zero effort.",
       },
     ],
     locale: "en_US",
@@ -52,8 +52,7 @@ export default async function RootLayout({
       <body className="min-h-screen bg-background font-sans antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
           disableTransitionOnChange
         >
           <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
@@ -63,7 +62,7 @@ export default async function RootLayout({
                   <Image
                     className="block dark:hidden"
                     src="/logo.svg"
-                    alt="imgsrc Logo"
+                    alt="og.new Logo"
                     width={36}
                     height={36}
                   />
@@ -73,29 +72,30 @@ export default async function RootLayout({
                   <Image
                     className="hidden dark:block"
                     src="/logo_dark.svg"
-                    alt="imgsrc Logo"
+                    alt="og.new Logo"
                     width={36}
                     height={36}
                   />
                 </Link>
               </div>
             </div>
+            <div className="hidden">
+              <div className="hidden space-x-2 sm:flex">
+                <Button variant="link">
+                  <Link href="#" target="_blank">
+                    Support
+                  </Link>
+                </Button>
 
-            <div className="hidden space-x-2 sm:flex">
-              <Button variant="link">
-                <Link href="#" target="_blank">
-                  Support
-                </Link>
-              </Button>
+                <ModeToggle />
+              </div>
 
-              <ModeToggle />
-            </div>
+              {/* Mobile navigation */}
+              <div className="flex space-x-2 sm:hidden">
+                <ModeToggle />
 
-            {/* Mobile navigation */}
-            <div className="flex space-x-2 sm:hidden">
-              <ModeToggle />
-
-              <MobileNav />
+                <MobileNav />
+              </div>
             </div>
           </nav>
 
@@ -105,11 +105,11 @@ export default async function RootLayout({
 
           <Separator />
 
-          <footer className="mx-auto max-w-7xl px-2 py-6 sm:px-6 lg:px-8">
+          <footer className="mx-auto hidden max-w-7xl px-2 py-6 sm:px-6 lg:px-8">
             <div className="flex justify-between">
               <div className="flex items-center space-x-2">
                 <div className="font-mono font-semibold">
-                  <Link href="https://imgsrc.io">.imgsrc</Link>
+                  <Link href="https://og.new">OG</Link>
                 </div>
 
                 <div>

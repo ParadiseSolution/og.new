@@ -80,12 +80,12 @@ const templateFilters: TemplateFilter[] = [
   //   width: 1024,
   //   height: 512,
   // },
-  {
-    platform: "x",
-    label: "Header",
-    width: 1500,
-    height: 500,
-  },
+  // {
+  //   platform: "x",
+  //   label: "Header",
+  //   width: 1500,
+  //   height: 500,
+  // },
   // {
   //   platform: "linkedin",
   //   label: "Post",
@@ -209,7 +209,7 @@ export default function TemplateSelector() {
 
   return (
     <div className="space-y-4">
-      <div className="space-y-2">
+      <div className="hidden space-y-2">
         <h2 className="sr-only text-sm font-medium">Choose a template</h2>
         <div className="flex gap-2">
           {Object.entries(templateFiltersByPlatform).map(

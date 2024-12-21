@@ -41,7 +41,7 @@ export default function Home() {
             </Card>
 
             <Tabs defaultValue="save">
-              <TabsList className="grid grid-cols-2">
+              <TabsList className="grid hidden grid-cols-2">
                 <TabsTrigger value="save">Save Image</TabsTrigger>
                 <TabsTrigger value="api">API Request</TabsTrigger>
               </TabsList>
@@ -62,7 +62,7 @@ export default function Home() {
                           variant="link"
                           asChild
                         >
-                          <Link href="https://imgsrc.io/guides/open-graph-meta-tags">
+                          <Link href="https://og.new/guides/open-graph-meta-tags">
                             Learn more
                           </Link>
                         </Button>{" "}
