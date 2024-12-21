@@ -15,6 +15,7 @@ import { Toaster } from "@/components/ui/sonner"
 import { ModeToggle } from "@/components/mode-toggle"
 import { MobileNav } from "@/components/nav/mobile-nav"
 import { ThemeProvider } from "@/components/theme-provider"
+import { GitHubLogoIcon } from "@radix-ui/react-icons"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://og.new"),
@@ -97,6 +98,9 @@ export default async function RootLayout({
                 <MobileNav />
               </div>
             </div>
+            <Link href='https://github.com/clerk/og.new' target='_blank'>
+                <GitHubLogoIcon className="dark:text-white text-black h-8 w-8" />
+              </Link>
           </nav>
 
           <main className="mx-auto min-h-[calc(100dvh-84px)] max-w-7xl px-2 py-6 sm:px-6 lg:px-8">
