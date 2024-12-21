@@ -1,4 +1,4 @@
-# og-new
+# og.new
 
 ## Development
 
@@ -15,3 +15,7 @@ Install the dependencies and run the app:
 pnpm i
 pnpm run dev
 ```
+
+## Credits
+
+Many thanks to [Fady](https://github.com/fadymak), the original creator of this OG image editor.
