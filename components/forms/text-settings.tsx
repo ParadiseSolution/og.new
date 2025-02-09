@@ -16,6 +16,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { HexColorPicker } from "react-colorful"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { Button } from "@/components/ui/button"
+import { textColors } from "@/data/colors"
 
 interface TextSettingsProps {
   fontFamily: FontFamily
@@ -28,18 +32,6 @@ interface TextSettingsProps {
   onChangeColor: (color: string) => void
   className?: string
 }
-
-// tailwind gray color palette
-const textColors = [
-  "#030712",
-  "#1f2937",
-  "#374151",
-  "#4b5563",
-  "#9ca3af",
-  "#d1d5db",
-  "#f3f4f6",
-  "#f9fafb",
-]
 
 export function TextSettings({
   fontFamily,
@@ -114,31 +106,49 @@ export function TextSettings({
 
         <div className="grid grid-cols-3 items-center gap-4">
           <Label htmlFor="text-color">Text Color</Label>
-          <RadioGroup
-            id="text-color"
-            className="col-span-2"
-            value={color}
-            onValueChange={onChangeColor}
-          >
-            <div className="flex flex-wrap gap-1">
-              {textColors.map((color) => (
-                <div key={color} className="h-9 min-h-9 w-9 min-w-9">
-                  <RadioGroupItem
-                    value={color}
-                    id={color}
-                    className="peer sr-only"
-                  />
-                  <Label
-                    htmlFor={color}
-                    className="block aspect-square cursor-pointer rounded-md border-2 border-muted bg-popover hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
-                    style={{
-                      background: color,
-                    }}
-                  ></Label>
-                </div>
-              ))}
-            </div>
-          </RadioGroup>
+          <div className="col-span-2">
+            <RadioGroup
+              id="text-color"
+              className="mb-2"
+              value={color}
+              onValueChange={onChangeColor}
+            >
+              <div className="grid grid-cols-4 gap-2 w-full">
+                {textColors.map((color) => (
+                  <div key={color} className="aspect-square">
+                    <RadioGroupItem
+                      value={color}
+                      id={color}
+                      className="peer sr-only"
+                    />
+                    <Label
+                      htmlFor={color}
+                      className="block h-full w-full cursor-pointer rounded-md border-2 border-muted bg-popover hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+                      style={{
+                        background: color,
+                      }}
+                    ></Label>
+                  </div>
+                ))}
+              </div>
+            </RadioGroup>
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button 
+                  variant="outline" 
+                  className="w-full h-8"
+                  style={{
+                    backgroundColor: color
+                  }}
+                >
+                  Custom Color
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-3">
+                <HexColorPicker color={color} onChange={onChangeColor} />
+              </PopoverContent>
+            </Popover>
+          </div>
         </div>
       </div>
     </div>
