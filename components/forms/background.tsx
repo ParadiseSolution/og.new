@@ -64,6 +64,7 @@ const solidColors = [
   "#F2D388",
   "#FCE38A",
   "#FFF6BD",
+  "#EA580c",
 
   // blue/purple
   "#67729D",
@@ -132,7 +133,6 @@ const linearGradients = [
       "rgb(254, 249, 195)",
     ],
   },
-
   // blue/purple
   {
     colorStops: [
@@ -240,6 +240,19 @@ const linearGradients = [
       "#e9e9e7 100%",
     ],
   },
+  // CodeFounder gradient colors
+  {
+    colorStops: [
+      "rgb(234, 88, 12)",
+      "rgb(251, 146, 60)",
+    ]
+  },
+  {
+    colorStops: [
+      "#EA580C",
+      "#4ADE80"
+    ]
+  }
 ]
 
 const DEFAULT_LINEAR_GRADIENT_DIRECTION: GradientDirection = "to top right"

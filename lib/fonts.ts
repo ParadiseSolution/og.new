@@ -41,6 +41,7 @@ export const fontFamilySchema = z
     "source-code-pro",
     "ibm-plex-mono",
     "jetbrains-mono",
+    "space-grotesk"
   ])
   .default(DEFAULT_FONT_FAMILY)
 export type FontFamily = z.infer<typeof fontFamilySchema>
@@ -175,6 +176,12 @@ export const supportedFonts: {
     value: "jetbrains-mono",
     label: "JetBrains Mono",
     weights: [100, 200, 300, 400, 500, 600, 700, 800],
+    subset: "latin",
+  },
+  {
+    value: "space-grotesk",
+    label: "Space Grotesk",
+    weights: [300, 400, 500, 600, 700],
     subset: "latin",
   },
 ] as const
